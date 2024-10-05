@@ -42,6 +42,7 @@ export const personalDetails = {
 export const socialMediaUrl = {
   linkdein: "https://www.linkedin.com/in/yossi-shem-tov/",
   github: "https://github.com/yossishemtov",
+  resume: "/resume.pdf",
 };
 
 export const workDetails = [
