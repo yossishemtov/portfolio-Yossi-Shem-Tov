@@ -15,8 +15,6 @@ import github from "./assets/techstack/github.png";
 import git from "./assets/techstack/git.png";
 import npm from "./assets/techstack/npm.png";
 import c from "./assets/techstack/c.png";
-
-
 import python from "./assets/techstack/Python.png"; 
 import java from "./assets/techstack/Java.png";     
 import typescript from "./assets/techstack/TypeScript.png"; 
@@ -42,7 +40,7 @@ export const personalDetails = {
 export const socialMediaUrl = {
   linkdein: "https://www.linkedin.com/in/yossi-shem-tov/",
   github: "https://github.com/yossishemtov",
-  resume: "/resume.pdf",
+ 
 };
 
 export const workDetails = [
@@ -151,4 +149,5 @@ export const projectDetails = [
 export const contactDetails = {
   email: "yossishem7@gmail.com",
   phone: "+972-52-7962746",
+  resume: "/resume.pdf",
 };

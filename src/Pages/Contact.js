@@ -1,53 +1,49 @@
 import React from "react";
 import { contactDetails } from "../Details";
+import resumeIcon from "../assets/resume.svg"; 
 
 function Contact() {
-  const { email, phone } = contactDetails;
+  const { email, phone, resume } = contactDetails;
+
   return (
-    <main className="container mx-auto max-width section">
-      <h1 className="text-center text-3xl md:text-4xl text-dark-heading dark:text-light-heading font-semibold md:font-bold">
-        Contact Me
-      </h1>
-      <div className="flex flex-col items-center mt-8">
-        <div className="flex items-center text-xl text-content mb-4">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            strokeWidth="1.5"
-            stroke="currentColor"
-            className="w-6 h-6 mr-2"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              d="M21.75 11.25v9a.75.75 0 01-.75.75H3a.75.75 0 01-.75-.75v-9m19.5 0L12 3 2.25 11.25"
-            />
-          </svg>
-          <a href={`mailto:${email}`} className="text-blue-500 hover:underline">
-            {email}
-          </a>
+    <main className="container mx-auto max-width pt-10 pb-20">
+      <section className="bg-gray-800 dark:bg-gray-900 p-10 rounded-xl shadow-lg max-w-xl mx-auto text-center text-white">
+        <h1 className="text-4xl font-extrabold mb-6">Contact Me</h1>
+        <p className="text-content py-4 lg:max-w-3xl mx-auto text-lg mb-8 text-gray-300">
+          I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision.
+        </p>
+
+        <div className="flex flex-col space-y-6 items-center">
+          {/* Email */}
+          <div className="flex items-center space-x-3">
+            <span className="font-semibold text-xl">Email:</span>
+            <a href={`mailto:${email}`} className="text-blue-400 underline text-xl hover:text-blue-300 transition duration-200">
+              {email}
+            </a>
+          </div>
+
+          {/* Phone */}
+          <div className="flex items-center space-x-3">
+            <span className="font-semibold text-xl">Phone:</span>
+            <a href={`tel:${phone}`} className="text-blue-400 underline text-xl hover:text-blue-300 transition duration-200">
+              {phone}
+            </a>
+          </div>
+
+          {/* Resume */}
+          <div className="flex items-center space-x-4 mt-8">
+            <img src={resumeIcon} alt="Resume Icon" className="h-12 w-12 filter invert" /> {/* אייקון גדול עם אפקט הפוך לצבעים */}
+            <a
+              href={resume}
+              target="_blank"
+              rel="noreferrer noopener"
+              className="text-blue-400 underline text-xl font-semibold hover:text-blue-300 transition duration-200"
+            >
+              View My Resume
+            </a>
+          </div>
         </div>
-        <div className="flex items-center text-xl text-content">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            strokeWidth="1.5"
-            stroke="currentColor"
-            className="w-6 h-6 mr-2"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              d="M2.25 3h19.5v14.25H2.25V3zm18 13.5a1.5 1.5 0 110-3 1.5 1.5 0 010 3zm-15-3a1.5 1.5 0 110 3 1.5 1.5 0 010-3z"
-            />
-          </svg>
-          <a href={`tel:${phone}`} className="text-blue-500 hover:underline">
-            {phone}
-          </a>
-        </div>
-      </div>
+      </section>
     </main>
   );
 }
