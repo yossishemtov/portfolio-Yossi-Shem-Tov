@@ -126,7 +126,7 @@ export const projectDetails = [
     image: FlightImage, 
     description: `Flight Deals Notifier is a Python program that helps users find and track the lowest flight prices for their desired travel destinations. It utilizes the Kiwi API for flight searches, the Sheety API for data storage in Google Sheets, and the Twilio API for SMS notifications, providing real-time updates on flight prices.`,
     techstack: "Python, Flask, API Integration, Twilio",
-    previewLink: "https://yourprojectlink.com",
+    previewLink: "",
     githubLink: "https://github.com/yossishemtov/flight-deals.git",
   },
   {

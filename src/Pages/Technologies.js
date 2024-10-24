@@ -52,16 +52,17 @@ function Technologies() {
         <img src={linux} title="Linux" alt="Linux" />
       </section>
       <section>
-        <h1 className="text-2xl pt-10 text-dark-heading dark:text-light-heading md:text-4xl xl:text-5xl xl:leading-tight font-bold">
-          Tools
-        </h1>
-      </section>
-      <section className="grid grid-cols-4 md:grid-cols-5 lg:grid-cols-6 items-center gap-10 pt-6">
-        <img src={vscode} title="Visual Studio Code" alt="Visual Studio Code" />
-        <img src={git} title="Git" alt="Git" />
-        <img src={github} title="GitHub" alt="GitHub" />
-        <img src={npm} title="NPM" alt="NPM" />
-      </section>
+  <h1 className="text-2xl pt-2 text-dark-heading dark:text-light-heading md:text-4xl xl:text-5xl xl:leading-tight font-bold"> {/* צמצום ה-padding ל-pt-2 */}
+    Tools
+  </h1>
+</section>
+<section className="grid grid-cols-4 md:grid-cols-5 lg:grid-cols-6 items-center gap-6 pt-2"> {/* הקטנת ה-padding top ל-pt-2 */}
+  <img src={vscode} title="Visual Studio Code" alt="Visual Studio Code" />
+  <img src={git} title="Git" alt="Git" />
+  <img src={github} title="GitHub" alt="GitHub" />
+  <img src={npm} title="NPM" alt="NPM" />
+</section>
+
     </main>
   );
 }

@@ -1,11 +1,19 @@
 import React from "react";
+
 function Footer() {
   return (
-    <footer className="container mx-auto py-1 fixed bottom-0 md:left-60 bg-white dark:bg-dark-mode">
-      <p className="text-xs text-center text-dark-content dark:text-light-content w-full">
-        Designed and Coded by{" Yossi Shem Tov "}
+    <footer className="w-full py-4 fixed bottom-0 bg-gray-900 text-white text-center">
+      <p className="text-xs">
+        Designed and Coded by{" "}
+        <a
+          href="https://www.linkedin.com/in/yossi-shem-tov/"
+          className="font-semibold text-blue-400 hover:underline"
+        >
+          Yossi Shem Tov
+        </a>
       </p>
     </footer>
   );
 }
+
 export default Footer;

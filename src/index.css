@@ -19,9 +19,71 @@
   @apply dark:text-light-content text-dark-content;
 }
 body {
+  @apply bg-gray-800 text-white;
   overflow-x: hidden;
+  scroll-behavior: smooth;
 }
+
 /* Hide scrollbar for Chrome, Safari and Opera */
 body::-webkit-scrollbar {
   display: none;
+}
+
+/* Navigation styling */
+nav {
+  @apply fixed top-0 left-0 w-full bg-gray-900 p-4 z-10; /* Fixed to top */
+}
+
+nav ul {
+  @apply flex justify-center space-x-4;
+}
+
+nav ul li a {
+  @apply text-white hover:bg-gray-700 p-2 rounded; /* אפקט hover */
+}
+
+/* Add custom padding to sections for proper spacing */
+section {
+  @apply py-10;
+}
+#home {
+  padding-top: 70px;
+}
+
+.divider {
+  border: none;
+  height: 2px;
+  background: linear-gradient(to right, #007bff, #6f42c1, #e83e8c);
+  margin: 40px 0;
+  opacity: 0.7;
+}
+.section {
+  @apply pt-2 xl:pt-2 2xl:pt-2;
+  @apply pb-2 xl:pb-2 2xl:pb-2;
+
+  scroll-margin-top: 100px;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.6s ease-out;
+}
+
+.section.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+footer {
+  background-color: #1a1a1a;
+  padding: 20px 0;
+  color: white;
+  width: 100%;
+  text-align: center;
+}
+
+.footer a {
+  color: #1e90ff;
+  text-decoration: none;
+}
+
+.footer a:hover {
+  text-decoration: underline;
 }
