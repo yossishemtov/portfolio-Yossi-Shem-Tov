@@ -11,7 +11,7 @@ import useScrollAnimations from "./hooks/useScrollAnimations";
 function App() {
   useScrollAnimations(); 
 
-  const [activeSection, setActiveSection] = useState("home");
+  const [activeSection, setActiveSection] = useState("home"); // הגדרת home כברירת מחדל
 
   useEffect(() => {
     const sections = document.querySelectorAll(".section");
@@ -26,7 +26,7 @@ function App() {
           entry.target.classList.remove("show");
         }
       });
-    }, { threshold: 0.5 }); // מציג את החלק כאשר לפחות 50% ממנו נראה
+    }, { threshold: 0.5 });
 
     sections.forEach((section) => observer.observe(section));
 
@@ -38,7 +38,7 @@ function App() {
   return (
     <>
       <Header />
-      <div id="home" className={`section ${activeSection === "home" ? "show" : ""}`}>
+      <div id="home" className={`section show ${activeSection === "home" ? "show" : ""}`}>
         <Home />
       </div>
 
