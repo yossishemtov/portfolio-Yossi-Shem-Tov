@@ -20,19 +20,24 @@
 }
 
 .text-content {
-  @apply text-white; /* מבטיח שהטקסט תמיד יהיה לבן */
+  @apply text-white;
 }
 
 body {
-  @apply bg-dark-mode text-white; /* גוף הדף בצבע כהה, טקסט לבן */
+  @apply bg-dark-mode text-white;
 }
 
-h1, h2, h3, h4, h5, h6 {
-  @apply text-white; /* הכותרות תמיד בלבן */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  @apply text-white;
 }
 
 .tech-stack {
-  @apply text-white; /* טקסט ה-tech stack תמיד בלבן */
+  @apply text-white;
 }
 
 body::-webkit-scrollbar {
@@ -40,7 +45,7 @@ body::-webkit-scrollbar {
 }
 
 nav {
-  background-color: #090d10 !important;
+  background-color: #050312 !important;
   position: fixed;
   top: 0;
   left: 0;
@@ -63,6 +68,7 @@ nav ul li a:hover {
 @media (max-width: 768px) {
   nav ul {
     @apply flex-col justify-center space-y-4;
+    background-color: #050312 !important;
   }
 }
 
@@ -89,7 +95,9 @@ section {
 .section {
   opacity: 0;
   transform: translateY(20px);
-  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  transition:
+    opacity 0.6s ease-out,
+    transform 0.6s ease-out;
 }
 
 .section.show {

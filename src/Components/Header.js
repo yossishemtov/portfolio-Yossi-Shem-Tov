@@ -7,20 +7,18 @@ function Header() {
     setIsMenuOpen(!isMenuOpen);
   };
 
-  // פונקציה לסגירת התפריט לאחר לחיצה על קישור
   const closeMenu = () => {
     setIsMenuOpen(false);
   };
 
-  // הקוד הזה יבטל את החלפת הצבעים באופן אוטומטי לפי הגדרות המכשיר
   useEffect(() => {
     const root = window.document.documentElement;
-    root.classList.remove('dark'); // הורדת התמיכה במצב כהה אוטומטי
+    root.classList.remove('dark'); 
   }, []);
 
   return (
     <nav className="fixed top-0 left-0 w-full bg-gray-900 p-4 flex justify-between items-center z-50" style={{ minHeight: '60px' }}>
-      {/* כפתור המבורגר למובייל */}
+
       <button
         className="text-white lg:hidden fixed left-4 top-4 z-50"
         onClick={toggleMenu}
@@ -36,10 +34,10 @@ function Header() {
         </svg>
       </button>
 
-      {/* תפריט ניווט */}
+
       <ul
         className={`flex-col lg:flex-row lg:space-x-4 lg:flex ${isMenuOpen ? 'flex' : 'hidden'} lg:items-center space-y-4 lg:space-y-0 fixed left-0 top-14 bg-gray-900 p-4 lg:static lg:bg-transparent lg:flex z-40`}
-        style={{ height: 'auto', minHeight: '60px' }} /* תיקון הגובה כך שהתפריט לא יתפוס את כל המסך */
+        style={{ height: 'auto', minHeight: '60px' }} 
       >
         <li><a href="#home" className="text-white hover:bg-gray-700 p-2 rounded" onClick={closeMenu}>Home</a></li>
         <li><a href="#about" className="text-white hover:bg-gray-700 p-2 rounded" onClick={closeMenu}>About</a></li>
@@ -48,7 +46,7 @@ function Header() {
         <li><a href="#contact" className="text-white hover:bg-gray-700 p-2 rounded" onClick={closeMenu}>Contact</a></li>
       </ul>
 
-      {/* אייקונים של LinkedIn ו-GitHub */}
+
       <div className="flex space-x-4 fixed right-4 top-4 z-50">
         <a href="https://www.linkedin.com/in/yossi-shem-tov/" target="_blank" rel="noopener noreferrer" className="text-white hover:bg-gray-700 p-2 rounded">
           <svg

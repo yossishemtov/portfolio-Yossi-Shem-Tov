@@ -26,7 +26,6 @@ function Technologies() {
   return (
     <main className="container mx-auto max-width pt-10 pb-20 ">
       <section>
-        {/* כותרת בלבן */}
         <h1 className="text-2xl text-white md:text-4xl xl:text-5xl xl:leading-tight font-bold">
           Tech Stack
         </h1>
@@ -51,7 +50,6 @@ function Technologies() {
         <img src={linux} title="Linux" alt="Linux" />
       </section>
       <section>
-        {/* כותרת בלבן */}
         <h1 className="text-2xl pt-2 text-white md:text-4xl xl:text-5xl xl:leading-tight font-bold">
           Tools
         </h1>
