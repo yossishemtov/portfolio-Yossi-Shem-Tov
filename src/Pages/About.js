@@ -5,17 +5,18 @@ import { personalDetails, workDetails, eduDetails } from "../Details";
 function About() {
   return (
     <main className="container mx-auto max-width pt-10 pb-20">
-      {/* סעיף ה-About עם מרווח תחתון */}
-      <section className="mb-4"> {/* הפחתת המרווח בין About ל-Work Experience */}
-        <h1 className="text-2xl text-dark-heading dark:text-light-heading md:text-4xl xl:text-5xl xl:leading-tight font-bold">
+     
+      <section className="mb-4">
+        <h1 className="text-xl sm:text-2xl md:text-4xl xl:text-5xl xl:leading-tight font-bold text-dark-heading dark:text-light-heading">
           About Me
         </h1>
-        <p className="text-content py-4 lg:max-w-3xl">{personalDetails.about}</p>
+        <p className="text-sm sm:text-base lg:text-lg text-content py-4 lg:max-w-3xl">
+          {personalDetails.about}
+        </p>
       </section>
 
-      {/* סעיף ה-Work Experience עם מרווח תחתון */}
-      <section className="mb-4"> {/* הפחתת המרווח בין Work Experience ל-Education */}
-        <h1 className="text-2xl text-dark-heading dark:text-light-heading md:text-4xl xl:text-5xl xl:leading-tight font-bold">
+      <section className="mb-4"> 
+        <h1 className="text-xl sm:text-2xl md:text-4xl xl:text-5xl xl:leading-tight font-bold text-dark-heading dark:text-light-heading">
           Work Experience
         </h1>
         {React.Children.toArray(
@@ -26,15 +27,14 @@ function About() {
               location={Location}
               type={Type}
               duration={Duration}
-              description={Description}  // Added description here
+              description={Description}  
             />
           ))
         )}
       </section>
 
-      {/* סעיף ה-Education עם מרווח תחתון */}
-      <section className="mb-4"> {/* הפחתת המרווח לפני הסעיף האחרון */}
-        <h1 className="text-2xl pt-10 text-dark-heading dark:text-light-heading md:text-4xl xl:text-5xl xl:leading-tight font-bold">
+      <section className="mb-4"> 
+        <h1 className="text-xl sm:text-2xl md:text-4xl xl:text-5xl xl:leading-tight font-bold text-dark-heading dark:text-light-heading pt-10">
           Education
         </h1>
         {React.Children.toArray(
@@ -45,7 +45,7 @@ function About() {
               location={Location}
               type={Type}
               duration={Duration}
-              description={Description}  // Added description here
+              description={Description}  
             />
           ))
         )}

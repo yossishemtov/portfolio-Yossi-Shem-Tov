@@ -18,9 +18,10 @@
 .text-content {
   @apply dark:text-light-content text-dark-content;
 }
+
 body {
   @apply bg-gray-800 text-white;
-  overflow-x: hidden;
+  overflow-x: auto;
   scroll-behavior: smooth;
 }
 
@@ -39,7 +40,7 @@ nav ul {
 }
 
 nav ul li a {
-  @apply text-white hover:bg-gray-700 p-2 rounded; /* אפקט hover */
+  @apply text-white hover:bg-gray-700 p-2 rounded; 
 }
 
 /* Add custom padding to sections for proper spacing */
@@ -58,13 +59,9 @@ section {
   opacity: 0.7;
 }
 .section {
-  @apply pt-2 xl:pt-2 2xl:pt-2;
-  @apply pb-2 xl:pb-2 2xl:pb-2;
-
-  scroll-margin-top: 100px;
   opacity: 0;
   transform: translateY(20px);
-  transition: all 0.6s ease-out;
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
 }
 
 .section.show {
@@ -86,4 +83,10 @@ footer {
 
 .footer a:hover {
   text-decoration: underline;
+}
+.text-gradient {
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  background: linear-gradient(to right, #007bff, #6f42c1, #e83e8c);
 }

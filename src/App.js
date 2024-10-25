@@ -13,41 +13,27 @@ function App() {
 
   const [activeSection, setActiveSection] = useState("home");
 
- 
   useEffect(() => {
-    const anchors = document.querySelectorAll('a[href^="#"]');
-    
-    anchors.forEach((anchor) => {
-      anchor.addEventListener("click", function (e) {
-        e.preventDefault();
-  
-        const targetId = this.getAttribute("href").substring(1);
-        const targetSection = document.getElementById(targetId);
-  
-        setActiveSection(targetId); 
-  
-        if (targetSection) {
+    const sections = document.querySelectorAll(".section");
 
-          const headerOffset = 55; 
-          const elementPosition = targetSection.getBoundingClientRect().top;
-          const offsetPosition = elementPosition + window.scrollY - headerOffset;
-  
-          window.scrollTo({
-            top: offsetPosition,
-            behavior: "smooth", 
-          });
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          const sectionId = entry.target.getAttribute("id");
+          setActiveSection(sectionId); 
+          entry.target.classList.add("show"); 
+        } else {
+          entry.target.classList.remove("show");
         }
       });
-    });
-  
+    }, { threshold: 0.5 }); 
+
+    sections.forEach((section) => observer.observe(section));
+
     return () => {
-      anchors.forEach((anchor) => {
-        anchor.removeEventListener("click", null);
-      });
+      sections.forEach((section) => observer.unobserve(section));
     };
   }, []);
-  
-
 
   return (
     <>
