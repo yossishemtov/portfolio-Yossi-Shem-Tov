@@ -17,7 +17,7 @@ function Project({
         </h1>
         <p className="text-content pt-4 font-light">{description}</p>
         <h3 className="text-dark-heading dark:text-light-heading font-medium pt-4">
-          Tech Stack : <span className="font-light">{techstack}</span>
+          Tech Stack : <span className="font-light dark:text-light-heading">{techstack}</span>
         </h3>
         <div className="flex justify-between items-center mt-5">
           <div className="flex items-center">

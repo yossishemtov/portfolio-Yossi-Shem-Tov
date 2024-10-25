@@ -36,6 +36,7 @@ h1, h2, h3, h4, h5, h6 {
 body::-webkit-scrollbar {
   display: none;
 }
+
 nav {
   background-color: #090d10 !important; /* צבע כחול בהיר עם חשיבות עליונה */
   position: fixed;
@@ -56,8 +57,6 @@ nav ul li a {
 nav ul li a:hover {
   background-color: #172631 !important; /* רקע כהה יותר עבור מעבר עכבר */
 }
-
-
 
 @media (max-width: 768px) {
   nav ul {
@@ -100,16 +99,19 @@ section {
   display: flex;
   justify-content: space-between;
   gap: 20px;
+  flex-wrap: wrap; /* מאפשר לכפתורים לעבור שורה במקרה שאין מספיק מקום */
 }
 
 .project-buttons a {
   display: inline-flex;
   align-items: center;
-  padding: 10px 15px;
+  justify-content: center; /* מרכז את הכפתורים */
+  padding: 12px 20px; /* מרווח גדול יותר בכפתורים */
   border-radius: 8px;
   background-color: #2d2d2d;
   color: white;
   text-decoration: none;
+  min-width: 150px; /* כפתורים לא יקטנו מתחת למינימום זה */
   transition: background-color 0.3s ease;
 }
 
@@ -125,15 +127,11 @@ section {
   }
 
   .project-buttons a {
-    width: 100%;
+    width: 100%; /* הכפתורים יתפרשו על כל הרוחב במובייל */
     text-align: center;
-    padding: 12px;
+    padding: 12px; /* התאמת גובה הכפתורים במובייל */
     font-size: 16px;
-  }
-
-  .project-buttons svg {
-    width: 18px;
-    height: 18px;
+    min-width: unset; /* ביטול המינימום על מנת לאפשר להם להתפרש */
   }
 }
 
