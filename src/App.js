@@ -26,7 +26,7 @@ function App() {
           entry.target.classList.remove("show");
         }
       });
-    }, { threshold: 0.5 }); 
+    }, { threshold: 0.5 }); // מציג את החלק כאשר לפחות 50% ממנו נראה
 
     sections.forEach((section) => observer.observe(section));
 
