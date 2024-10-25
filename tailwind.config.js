@@ -1,5 +1,5 @@
 module.exports = {
-  darkMode: false, 
+  darkMode: 'class', // שליטה ידנית במצב כהה עם class 'dark'
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
     extend: {
@@ -11,11 +11,11 @@ module.exports = {
         "dark-heading": "#1f2428",
         "dark-content": "#666666",
         "light-heading": "#CCCCCC",
-        "dark-mode": "#191919", 
+        "dark-mode": "#191919",
         "dark-card": "#363636",
         "green-text": "#018C0F",
         "greenbg": "#D7FFE0",
-        "default-background": "#FFFFFF", 
+        "default-background": "#FFFFFF",
       },
     },
   },

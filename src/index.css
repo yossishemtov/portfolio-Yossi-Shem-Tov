@@ -20,17 +20,19 @@
 }
 
 .text-content {
-  @apply text-light-content;
+  @apply text-white; /* מבטיח שהטקסט תמיד יהיה לבן */
 }
 
 body {
-  @apply bg-gray-900 text-white;
-  overflow-x: auto;
-  scroll-behavior: smooth;
+  @apply bg-dark-mode text-white; /* גוף הדף בצבע כהה, טקסט לבן */
 }
 
 h1, h2, h3, h4, h5, h6 {
-  @apply text-white;
+  @apply text-white; /* הכותרות תמיד בלבן */
+}
+
+.tech-stack {
+  @apply text-white; /* טקסט ה-tech stack תמיד בלבן */
 }
 
 body::-webkit-scrollbar {
@@ -38,7 +40,7 @@ body::-webkit-scrollbar {
 }
 
 nav {
-  background-color: #090d10 !important; /* צבע כחול בהיר עם חשיבות עליונה */
+  background-color: #090d10 !important;
   position: fixed;
   top: 0;
   left: 0;
@@ -48,14 +50,14 @@ nav {
 }
 
 nav ul li a {
-  color: white !important; /* טקסט לבן עם חשיבות עליונה */
+  color: white !important;
   padding: 8px 16px;
   border-radius: 8px;
   text-decoration: none;
 }
 
 nav ul li a:hover {
-  background-color: #172631 !important; /* רקע כהה יותר עבור מעבר עכבר */
+  background-color: #172631 !important;
 }
 
 @media (max-width: 768px) {
@@ -99,19 +101,19 @@ section {
   display: flex;
   justify-content: space-between;
   gap: 20px;
-  flex-wrap: wrap; /* מאפשר לכפתורים לעבור שורה במקרה שאין מספיק מקום */
+  flex-wrap: wrap;
 }
 
 .project-buttons a {
   display: inline-flex;
   align-items: center;
-  justify-content: center; /* מרכז את הכפתורים */
-  padding: 12px 20px; /* מרווח גדול יותר בכפתורים */
+  justify-content: center;
+  padding: 12px 20px;
   border-radius: 8px;
   background-color: #2d2d2d;
   color: white;
   text-decoration: none;
-  min-width: 150px; /* כפתורים לא יקטנו מתחת למינימום זה */
+  min-width: 150px;
   transition: background-color 0.3s ease;
 }
 
@@ -127,11 +129,11 @@ section {
   }
 
   .project-buttons a {
-    width: 100%; /* הכפתורים יתפרשו על כל הרוחב במובייל */
+    width: 100%;
     text-align: center;
-    padding: 12px; /* התאמת גובה הכפתורים במובייל */
+    padding: 12px;
     font-size: 16px;
-    min-width: unset; /* ביטול המינימום על מנת לאפשר להם להתפרש */
+    min-width: unset;
   }
 }
 

@@ -7,16 +7,18 @@ function About() {
     <main className="container mx-auto max-width pt-10 pb-20">
      
       <section className="mb-4">
-        <h1 className="text-xl sm:text-2xl md:text-4xl xl:text-5xl xl:leading-tight font-bold text-dark-heading dark:text-light-heading">
+        {/* כותרת בלבן */}
+        <h1 className="text-xl sm:text-2xl md:text-4xl xl:text-5xl xl:leading-tight font-bold text-white">
           About Me
         </h1>
-        <p className="text-sm sm:text-base lg:text-lg text-content py-4 lg:max-w-3xl">
+        <p className="text-sm sm:text-base lg:text-lg text-white py-4 lg:max-w-3xl">
           {personalDetails.about}
         </p>
       </section>
 
       <section className="mb-4"> 
-        <h1 className="text-xl sm:text-2xl md:text-4xl xl:text-5xl xl:leading-tight font-bold text-dark-heading dark:text-light-heading">
+        {/* כותרת בלבן */}
+        <h1 className="text-xl sm:text-2xl md:text-4xl xl:text-5xl xl:leading-tight font-bold text-white">
           Work Experience
         </h1>
         {React.Children.toArray(
@@ -34,7 +36,8 @@ function About() {
       </section>
 
       <section className="mb-4"> 
-        <h1 className="text-xl sm:text-2xl md:text-4xl xl:text-5xl xl:leading-tight font-bold text-dark-heading dark:text-light-heading pt-10">
+        {/* כותרת בלבן */}
+        <h1 className="text-xl sm:text-2xl md:text-4xl xl:text-5xl xl:leading-tight font-bold text-white pt-10">
           Education
         </h1>
         {React.Children.toArray(
