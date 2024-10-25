@@ -26,7 +26,7 @@ function App() {
           entry.target.classList.remove("show");
         }
       });
-    }, { threshold: 0.5 });
+    }, { threshold: 0.45 });
 
     sections.forEach((section) => observer.observe(section));
 
