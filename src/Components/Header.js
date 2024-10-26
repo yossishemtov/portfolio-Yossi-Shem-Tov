@@ -7,7 +7,7 @@ function Header() {
     setIsMenuOpen(!isMenuOpen);
   };
 
-  const scrollToSectionWithOffset = (id, offset = -35) => {
+  const scrollToSectionWithOffset = (id, offset = -100) => {
     const section = document.getElementById(id);
     if (section) {
       const yOffset = -offset;
