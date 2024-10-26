@@ -14,7 +14,6 @@ function Contact() {
         </p>
 
         <div className="flex flex-col space-y-6 items-center">
-          {/* Email */}
           <div className="flex items-center space-x-3">
             <span className="font-semibold text-xl">Email:</span>
             <a href={`mailto:${email}`} className="text-blue-400 underline text-xl hover:text-blue-300 transition duration-200">
@@ -22,7 +21,6 @@ function Contact() {
             </a>
           </div>
 
-          {/* Phone */}
           <div className="flex items-center space-x-3">
             <span className="font-semibold text-xl">Phone:</span>
             <a href={`tel:${phone}`} className="text-blue-400 underline text-xl hover:text-blue-300 transition duration-200">
@@ -30,9 +28,8 @@ function Contact() {
             </a>
           </div>
 
-          {/* Resume */}
           <div className="flex items-center space-x-4 mt-8">
-            <img src={resumeIcon} alt="Resume Icon" className="h-12 w-12 filter invert" /> {/* אייקון גדול עם אפקט הפוך לצבעים */}
+            <img src={resumeIcon} alt="Resume Icon" className="h-12 w-12 filter invert" /> 
             <a
               href={resume}
               target="_blank"

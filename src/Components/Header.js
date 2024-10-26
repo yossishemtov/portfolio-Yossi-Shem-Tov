@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from "react";
 
 function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -7,18 +7,33 @@ function Header() {
     setIsMenuOpen(!isMenuOpen);
   };
 
+  const scrollToSectionWithOffset = (id, offset = -35) => {
+    const section = document.getElementById(id);
+    if (section) {
+      const yOffset = -offset;
+      const yPosition = section.getBoundingClientRect().top + window.pageYOffset + yOffset;
+
+      window.scrollTo({
+        top: yPosition,
+        behavior: "smooth",
+      });
+    }
+  };
+
   const closeMenu = () => {
     setIsMenuOpen(false);
   };
 
   useEffect(() => {
     const root = window.document.documentElement;
-    root.classList.remove('dark'); 
+    root.classList.remove("dark");
   }, []);
 
   return (
-    <nav className="fixed top-0 left-0 w-full bg-gray-900 p-4 flex justify-between items-center z-50" style={{ minHeight: '60px' }}>
-
+    <nav
+      className="fixed top-0 left-0 w-full bg-gray-900 p-4 flex justify-between items-center z-50"
+      style={{ minHeight: "60px" }}
+    >
       <button
         className="text-white lg:hidden fixed left-4 top-4 z-50"
         onClick={toggleMenu}
@@ -30,25 +45,83 @@ function Header() {
           viewBox="0 0 24 24"
           xmlns="http://www.w3.org/2000/svg"
         >
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16m-7 6h7" />
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth="2"
+            d="M4 6h16M4 12h16m-7 6h7"
+          />
         </svg>
       </button>
 
-
       <ul
-        className={`flex-col lg:flex-row lg:space-x-4 lg:flex ${isMenuOpen ? 'flex' : 'hidden'} lg:items-center space-y-4 lg:space-y-0 fixed left-0 top-14 bg-gray-900 p-4 lg:static lg:bg-transparent lg:flex z-40`}
-        style={{ height: 'auto', minHeight: '60px' }} 
+        className={`flex-col lg:flex-row lg:space-x-4 lg:flex ${isMenuOpen ? "flex" : "hidden"} lg:items-center space-y-4 lg:space-y-0 fixed left-0 top-14 bg-gray-900 p-4 lg:static lg:bg-transparent lg:flex z-40`}
+        style={{ height: "auto", minHeight: "60px" }}
       >
-        <li><a href="#home" className="text-white hover:bg-gray-700 p-2 rounded" onClick={closeMenu}>Home</a></li>
-        <li><a href="#about" className="text-white hover:bg-gray-700 p-2 rounded" onClick={closeMenu}>About</a></li>
-        <li><a href="#projects" className="text-white hover:bg-gray-700 p-2 rounded" onClick={closeMenu}>Projects</a></li>
-        <li><a href="#technologies" className="text-white hover:bg-gray-700 p-2 rounded" onClick={closeMenu}>Technologies</a></li>
-        <li><a href="#contact" className="text-white hover:bg-gray-700 p-2 rounded" onClick={closeMenu}>Contact</a></li>
+        <li>
+          <button
+            className="text-white hover:bg-gray-700 p-2 rounded"
+            onClick={() => {
+              scrollToSectionWithOffset("home");
+              closeMenu();
+            }}
+          >
+            Home
+          </button>
+        </li>
+        <li>
+          <button
+            className="text-white hover:bg-gray-700 p-2 rounded"
+            onClick={() => {
+              scrollToSectionWithOffset("about");
+              closeMenu();
+            }}
+          >
+            About
+          </button>
+        </li>
+        <li>
+          <button
+            className="text-white hover:bg-gray-700 p-2 rounded"
+            onClick={() => {
+              scrollToSectionWithOffset("projects");
+              closeMenu();
+            }}
+          >
+            Projects
+          </button>
+        </li>
+        <li>
+          <button
+            className="text-white hover:bg-gray-700 p-2 rounded"
+            onClick={() => {
+              scrollToSectionWithOffset("technologies");
+              closeMenu();
+            }}
+          >
+            Technologies
+          </button>
+        </li>
+        <li>
+          <button
+            className="text-white hover:bg-gray-700 p-2 rounded"
+            onClick={() => {
+              scrollToSectionWithOffset("contact");
+              closeMenu();
+            }}
+          >
+            Contact
+          </button>
+        </li>
       </ul>
 
-
       <div className="flex space-x-4 fixed right-4 top-4 z-50">
-        <a href="https://www.linkedin.com/in/yossi-shem-tov/" target="_blank" rel="noopener noreferrer" className="text-white hover:bg-gray-700 p-2 rounded">
+        <a
+          href="https://www.linkedin.com/in/yossi-shem-tov/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-white hover:bg-gray-700 p-2 rounded"
+        >
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="24"
@@ -60,7 +133,12 @@ function Header() {
             <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.761 0 5-2.239 5-5v-14c0-2.761-2.239-5-5-5zm-11 19h-3v-10h3v10zm-1.5-11.268c-.966 0-1.75-.784-1.75-1.75s.784-1.75 1.75-1.75 1.75.784 1.75 1.75-.784 1.75-1.75 1.75zm13.5 11.268h-3v-5.604c0-1.337-.025-3.063-1.866-3.063-1.868 0-2.154 1.459-2.154 2.967v5.7h-3v-10h2.879v1.367h.041c.401-.761 1.379-1.563 2.839-1.563 3.036 0 3.594 1.996 3.594 4.591v5.605z" />
           </svg>
         </a>
-        <a href="https://github.com/yossishemtov" target="_blank" rel="noopener noreferrer" className="text-white hover:bg-gray-700 p-2 rounded">
+        <a
+          href="https://github.com/yossishemtov"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-white hover:bg-gray-700 p-2 rounded"
+        >
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="24"
