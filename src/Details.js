@@ -145,7 +145,7 @@ export const projectDetails = [
 ];
 
 export const contactDetails = {
-  email: "yossishem7@gmail.com",
+  email: "yossishemtov7@gmail.com",
   phone: "+972-52-7962746",
   resume: "/resume.pdf",
 };

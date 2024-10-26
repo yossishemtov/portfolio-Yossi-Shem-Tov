@@ -52,6 +52,9 @@ nav {
   width: 100%;
   padding: 16px;
   z-index: 10;
+  padding: 0 !important; /* ביטול padding */
+  height: 65px !important; /* קביעת גובה קבוע */
+  line-height: 25px; /* מיקום התוכן לגובה הסרגל */
 }
 
 nav ul li a {
@@ -111,6 +114,18 @@ section {
   gap: 20px;
   flex-wrap: wrap;
 }
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 
 .project-buttons a {
   display: inline-flex;
