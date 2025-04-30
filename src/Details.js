@@ -33,7 +33,8 @@ export const personalDetails = {
   name: "Yossi Shem Tov",
   tagline: "Software engineering student",
   img: profile,
-  about: `Final-year software engineering student. Detail-oriented and proficient in programming. I am a fast learner and a team player, eager to apply my acquired knowledge in a creative environment.`,
+  about: `I'm a software engineering graduate with over a year of hands-on backend development experience, developed during my time in a student position at a leading defense tech company. I’m driven by a passion for solving complex problems and continuously expanding my technical expertise. I'm now looking to join a dynamic and challenging environment where I can grow professionally, contribute meaningful value, and make an impact through smart, scalable code.`,
+
 };
 
 export const socialMediaUrl = {
