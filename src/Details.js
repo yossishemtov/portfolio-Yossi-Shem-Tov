@@ -43,6 +43,7 @@ export const socialMediaUrl = {
 };
 
 export const workDetails = [
+
   {
     Position: "Tutor",
     Company: "Self-Employed",
@@ -53,13 +54,22 @@ export const workDetails = [
       "Tutoring students in programming and mathematics, enhancing their understanding and skills in various subjects.",
   },
   {
-    Position: "Software Developer",
+    Position: "Student Software Developer",
     Company: "Elbit Naval Systems",
     Location: "Haifa",
     Type: "Part-Time",
-    Duration: "2024 - Present",
+    Duration: "Jun 2024 - Nov 2025",
     Description:
       "As a software development student, I develop microservices that are integrated into various systems. My responsibilities include identifying issues and troubleshooting problems related to these integrations, utilizing technologies such as Docker and Kubernetes.",
+  },
+    {
+    Position: "Software Developer",
+    Company: "Elbit Naval Systems",
+    Location: "Haifa",
+    Type: "Full Time",
+    Duration: "Nov 2025 - Present",
+    Description:
+      "As a software development, developing microservices and applications in C# and TypeScript for an autonomous boat program integrated into various systems. Responsibilities include identifying issues, troubleshooting integration problems, and working with Docker and Kubernetes technologies.",
   },
 ];
 
